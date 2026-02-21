@@ -1,5 +1,5 @@
 
-```median
+```mermaid
 
 sequenceDiagram
     participant browser
