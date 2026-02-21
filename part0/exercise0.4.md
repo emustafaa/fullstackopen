@@ -1,14 +1,17 @@
+
+```mermaid
+
 sequenceDiagram
-particpant browser
-particpant server
+    particpant browser
+    particpant server
 
-browser->>server: POST
-https://studies.cs.helsinki.fi/exampleapp/new_note
-activate server
-server-->browser: the location exampleapp/notes
-deactivate server
+    browser->>server: POST
+    https://studies.cs.helsinki.fi/exampleapp/new_note
+    activate server
+    server-->browser: the location exampleapp/notes
+    deactivate server
 
-browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/notes
+    browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/notes
     activate server
     server-->>browser: HTML document
     deactivate server
@@ -29,3 +32,5 @@ browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/notes
     activate server
     server-->>browser: [{ "content": "HTML is easy", "date": "2023-1-1" }, ... ]
     deactivate server
+
+```
