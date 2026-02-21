@@ -5,9 +5,9 @@ sequenceDiagram
     participant browser
     participant server
     
-    browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/notes
+    browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/spa
     activate server
-    Note left of server: The server sends browser the notes html file
+    Note left of server: The server sends browser the spa html file
     server-->>browser: HTML document
     
     deactivate server
@@ -20,11 +20,11 @@ sequenceDiagram
     server-->>browser: the css file
     deactivate server
 
-    Note right of browser: The browser sends GET request to for main javascript file
+    Note right of browser: The browser sends GET request to for spa javascript file
 
-    browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/main.js
+    browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/spa.js
     activate server
-    Note left of server: The server sends browser the main javascript file
+    Note left of server: The server sends browser the spa javascript file
     server-->>browser: the JavaScript file
     deactivate server
 
@@ -33,7 +33,7 @@ sequenceDiagram
     browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/data.json
     activate server
     Note left of server: The server sends browser the data json file
-    server-->>browser: [{ "content": "HTML is easy", "date": "2023-1-1" }, ... ]
+    server-->>browser: [{content: "insta: tonybarnss", date: "2026-02-20T16:33:46.638Z"},{content: "insta: tonybarnss", date: "2026-02-20T16:33:46.638Z"}...]
     deactivate server
 
     Note right of browser: The browser executes the callback function that renders the notes
